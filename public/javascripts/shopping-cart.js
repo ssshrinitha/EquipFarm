@@ -56,7 +56,7 @@ $(document).ready(function(){
                 '</br>' +
                 '<button type="button" class="btn btn-primary proceed-checkout-btn">Proceed to Checkout</button>' +
                 '</br>' + '</br>' +
-                '<a class="btn btn-warning return-btn" href="/" role="button">Continue Shopping</a>' +
+                '<a class="btn btn-warning return-btn" href="/rent" role="button">Continue Shopping</a>' +
             '</div>' + 
         '</div>'
     );

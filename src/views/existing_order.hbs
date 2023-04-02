@@ -11,15 +11,15 @@
             <div class="caption">
                 <h5>Title: {{this.title}}</h5>
                 <p>Quantity: {{this.quantity}}</p>
-                <p>Price: ${{this.total_product_price}}</p>
+                <p>Price: rs.{{this.total_product_price}}</p>
             </div>
         </div>
         {{/each}}
     </div>
     <div>
-        <h3>Your Total Price is: ${{order.total_price}}</h3>
+        <h3>Your Total Price is: Rs.{{order.total_price}}</h3>
         </br>
-        <a class="btn btn-primary" href="/" role="button">Continue Shopping</a>
+        <a class="btn btn-primary" href="/rent" role="button">Continue Renting</a>
     </div>
     </br>
 </div>

@@ -412,12 +412,12 @@ app.post("/products/add", upload.single("file"), async (req, res) => {
         imagePath: imagePath,
         price: req.body.price,
         price_description: req.body.price_description,
-        product_description: req.body.price_description
+        product_description: req.body.product_description
 
     })
 
    await add_product.save().then((result) => {
-        res.redirect("/");
+        res.redirect("/rent");
     }).catch((error) => {
         res.send(error)
     })
@@ -480,7 +480,7 @@ app.put("/products/:id", isLoggedIn, upload.single("file"), (req, res) => {
             }
         }).then((product) => {
 
-            res.redirect("/")
+            res.redirect("/rent")
 
         }).catch((error) => {
 
@@ -498,7 +498,7 @@ app.delete("/products/:id/", isLoggedIn, (req, res) => {
         }
     }).then((product) => {
 
-        res.redirect("/");
+        res.redirect("/rent");
 
     }).catch((error) => {
         res.status(500).send(error)
