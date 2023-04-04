@@ -1,10 +1,84 @@
 body{
     padding-top: 70px;
+    width: 100%;
+    height: 100vh;
+    /* background-image:linear-gradient(-45deg, #57c84d, #83d475, #abe098, #d6fa8c, #c5e8b7, #eeffba); */
+    background-color: #fff;
+    background-size: 400% 400%;
+    /* animation: gradient 15s ease infinite; */
+    position: relative; 
+}
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}  */
+.container-fluid{
+    background: -webkit-linear-gradient(left, #5dc20b, #77d420);
+    
+}
+.navbar-brand{
+    color: #fff;
+}
+.mc {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+box-shadow: rgba(10, 91, 27, 0.15) 0px 15px 25px, rgba(3, 133, 12, 0.05) 0px 5px 10px;
+}
+.product_title{
+    color: #000;
+    font-weight:bold;
+}
+.btn-warning{
+    background: -webkit-linear-gradient(left, #a6e771, #77d420);
+    border: none;
+}
+.mc:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+}
+.mc:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -2;
+    filter: blur(25px);
+}
+
+.mc-i {
+    width: 200px;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 1px;
+    float: left;
+    padding: 25px 10px 25px 10px;
 }
 
 .price {
     font-weight: bold;
     font-size: medium;
+    color:#000;
 }
 
 /* Don't display anything if price description is not present */
@@ -14,6 +88,7 @@ body{
 
 .price_desc{
     font-size: smaller;
+    color: #000;
 }
 
 .price_desc:before {
@@ -56,7 +131,8 @@ a.add-btn-2{
 .img-thumbnail{
     width:200px; 
     height:200px; 
-    display:inline-block;
+    display:inline-flex;
+   
 }
 
 .img-popup-thumbnail{
@@ -68,6 +144,7 @@ a.add-btn-2{
     padding: 10px;
     display: table;
 	table-layout: fixed;
+    
 }
 
 .price-range{
@@ -112,7 +189,7 @@ a.add-btn-2{
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: #045514;
     overflow: hidden;
 }
   
@@ -144,3 +221,59 @@ a.add-btn-2{
     display: none;
 }
 
+/* //Black background with box effects
+body {
+    padding-top: 70px;
+    width: 100%;
+    height: 100vh;
+    background-color: #060c21;
+}
+.mc {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background: #060c21;
+
+
+}
+
+.mc:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+    
+}
+
+.mc:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(25px);
+}
+
+.mc:before,
+.mc:after {
+    background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}  
+.mc-i {
+    width: 200px;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 1px;
+    float: left;
+    padding: 25px 10px 25px 10px;
+} */
