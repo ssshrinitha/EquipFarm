@@ -1,0 +1,6 @@
+Instructions to execute the project equipfarm 
+
+* Nodejs must be installed 
+* When a project is published in git repository , node modules will not be included due to its  large space. Therefore when first cloned , install the needed dependencies in package.json file  using npm install 
+* Install hbs and express package using npm install command 
+* To run the project, set the terminal path to root folder of the project and run the command "npm start" .

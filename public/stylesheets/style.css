@@ -21,6 +21,9 @@ body{
         background-position: 0% 50%;
     }
 }  */
+.btn btn-primary{
+    background: -webkit-linear-gradient(left, #5dc20b, #77d420);
+}
 .container-fluid{
     background: -webkit-linear-gradient(left, #5dc20b, #77d420);
     

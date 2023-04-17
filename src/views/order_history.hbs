@@ -1,5 +1,74 @@
 {{>header}}
 
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="color: white;" href="/">EquipFarm</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                {{# if login}}
+                <li class="nav-item"><a class="nav-link" style="color: white;" href="/orders/{{user.email}}">Orders</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: white;" href="/cart" >Shopping Cart</a></li>
+                {{# if user.isadmin}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" style="color: white;" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Lend<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a  style="color: black;"href="/admin/add">Add Product</a></li>
+                        <li><a  style="color: black;"href="/admin/update">Update/Delete Product</a></li>
+                    </ul>
+                </li>
+                {{/if}}
+                <li class="nav-item"><a class="nav-link"style="color: white;" href="/user/logout">Logout</a></li>
+                {{else}}
+                <li class="nav-item"><a class="nav-link"style="color: white;" href="/cart">Shopping Cart</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: white;"href="/user/signin">Sign In</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: white;"href="/user/signup">Register</a></li>
+                {{/if}}
+                
+            </ul>
+            
+                
+            
+            <form class="form-inline my-2 my-lg-0 form-style">
+                <button type="button" class="btn btn-outline-success" id="filterBtn" data-toggle="modal"
+                    data-target="#filterModal"><b>Filter</b></button>
+                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Looking for something?"
+                    aria-label="Search">
+                <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="searchBtn"><b>Search</b></button>
+                
+            </form>
+            <li>
+                    <div id="google_translate_element" style="float:right;"></div>
+            </li>            
+            
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav> 
+
+<script
+        type="text/javascript">
+              function googleTranslateElementInit() {
+                     new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+              }
+       </script>
+
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 <div class="container">
     <h1>Your Order History</h1>
     {{#each order }}
@@ -18,7 +87,8 @@
     {{/each}}
 </div>
 </br>
-<a class="btn btn-primary" href="/rent" role="button">Continue Renting</a></br>
+    
+<a class="btn btn-primary" href="/rent" role="button" style="background: -webkit-linear-gradient(left, #5dc20b, #77d420);">Continue Renting</a></br>
 </div>
 
 {{>footer}}

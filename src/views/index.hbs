@@ -39,14 +39,23 @@
                 <li class="nav-item"><a class="nav-link" style="color: white;"href="/user/signin">Sign In</a></li>
                 <li class="nav-item"><a class="nav-link" style="color: white;"href="/user/signup">Register</a></li>
                 {{/if}}
+                
             </ul>
+            
+                
+            
             <form class="form-inline my-2 my-lg-0 form-style">
                 <button type="button" class="btn btn-outline-success" id="filterBtn" data-toggle="modal"
                     data-target="#filterModal"><b>Filter</b></button>
                 <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Looking for something?"
                     aria-label="Search">
                 <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="searchBtn"><b>Search</b></button>
+                
             </form>
+            <li>
+                    <div id="google_translate_element" style="float:right;"></div>
+            </li>            
+            
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav> 
@@ -85,5 +94,15 @@
     </nav>
 
 </div>
+
+<script
+        type="text/javascript">
+              function googleTranslateElementInit() {
+                     new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+              }
+       </script>
+
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 {{>footer}}

@@ -18,7 +18,7 @@ const user_model=new Schema({
     },
     user_type:{
         type:String,
-        requried:true,
+        required:true,
         trim:true
     },
     user_password:{
